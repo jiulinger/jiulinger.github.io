@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>使用OneDrive备份自己的博客文章</title>
+    <link href="/2022/01/03/%E4%BD%BF%E7%94%A8OneDrive%E5%A4%87%E4%BB%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+    <url>/2022/01/03/%E4%BD%BF%E7%94%A8OneDrive%E5%A4%87%E4%BB%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="使用OneDrive同步自己的博客文章"><a href="#使用OneDrive同步自己的博客文章" class="headerlink" title="使用OneDrive同步自己的博客文章"></a>使用OneDrive同步自己的博客文章</h1><h2 id="需要下面两个文件夹位置以及自定义存储文件夹名称"><a href="#需要下面两个文件夹位置以及自定义存储文件夹名称" class="headerlink" title="需要下面两个文件夹位置以及自定义存储文件夹名称"></a>需要下面两个文件夹位置以及自定义存储文件夹名称</h2><div class="note note-info">            <ol><li>OneDrive在你电脑上的文件夹位置    <span class="label label-default">F:\OneDrive\OneDrive_Mine\OneDrive</span> </li></ol>          </div><div class="note note-info">            <ol start="2"><li>需要同步的文件夹内文件存放到OneDrive的文件夹名称(自己随意)   <span class="label label-default">Hexo文章</span></li></ol>          </div><div class="note note-info">            <ol start="3"><li>需要同步的文件夹位置，即博客文章的存放位置 <span class="label label-default">D:\Blog\Hexo\source_posts</span></li></ol>          </div><h2 id="操作方法："><a href="#操作方法：" class="headerlink" title="操作方法："></a>操作方法：</h2><div class="note note-info">            <ol><li>用管理员身份运行<span class="label label-default">cmd</span></li></ol>          </div><div class="note note-info">            <ol start="2"><li>输入以下格式命令：</li></ol>          </div><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">mklink /d <span class="hljs-string">&quot;onedrive文件夹地址\存放同步的文件的文件夹名&quot;</span> <span class="hljs-string">&quot;需要同步的文件夹地址&quot;</span><br></code></pre></div></td></tr></table></figure><div class="note note-info">            <ol start="3"><li>更改位适合自己的格式即：</li></ol>          </div><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">mklink /d <span class="hljs-string">&quot;F:\OneDrive\OneDrive_Mine\OneDrive\Hexo文章&quot;</span> <span class="hljs-string">&quot;D:\Blog\Hexo\source\_posts&quot;</span><br></code></pre></div></td></tr></table></figure><div class="note note-info">            <ol start="4"><li>成功示例：</li></ol>          </div><p><img src="https://yp.jiulinger.cn/images/image-20220112134824233.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>博客之旅</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>博客之旅</tag>
+      
+      <tag>OneDrive</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GitHub搭建Hexo博客</title>
+    <link href="/2022/01/02/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2022/01/02/GitHub%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1-安装必备环境"><a href="#1-安装必备环境" class="headerlink" title="1. 安装必备环境"></a>1. 安装必备环境</h2><ol><li>安装Git和Node.js</li><li>在CMD命令行中输入下面的命令查看是否安装成功</li></ol><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">git --version<br>node -v<br>npm -v<br></code></pre></div></td></tr></table></figure><p><img src="https://yp.jiulinger.cn/images/image-20211220165728397.png" alt="image-20211220165728397"></p><h2 id="2-连接GitHub"><a href="#2-连接GitHub" class="headerlink" title="2. 连接GitHub"></a>2. 连接GitHub</h2><ol><li>在Git中进行下面操作，设置用户名和邮箱</li></ol><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">git config --global user.name <span class="hljs-string">&quot;jiulinger&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;2711965146@qq.com&quot;</span><br></code></pre></div></td></tr></table></figure><ol start="2"><li>创建SSH秘钥，在Git中进行下面操作</li></ol><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">ssh-keygen -t rsa -C <span class="hljs-string">&quot;2711965146@qq.com&quot;</span><br></code></pre></div></td></tr></table></figure><ol start="3"><li>执行上面操作后，连续点击回车，完成后如下图</li></ol><p><img src="https://yp.jiulinger.cn/images/image-20211220170250138.png" alt="image-20211220170250138"></p><ol start="4"><li>找到生成的秘钥文件，并赋值其中的全部内容</li></ol><p><img src="https://yp.jiulinger.cn/images/image-20211220170704263.png" alt=" "></p><ol start="5"><li>在GitHub的Settings页面内，选择SSH and GPG keys,点击New SSH key,自动以Title后并将刚才复制的秘钥内容复制进key下方的输入框内，最后点击Add SSH key</li></ol><p><img src="https://yp.jiulinger.cn/images/image-20211220171541626.png" alt="image-20211220171541626"></p><ol start="6"><li>验证连接是否成功，在Git中进行下面操作</li></ol><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">ssh git<span class="hljs-meta">@github</span>.com <br></code></pre></div></td></tr></table></figure><p>提示你是否确认时，输入：yes</p><p><img src="https://yp.jiulinger.cn/images/image-20211220172035835.png" alt="image-20211220172035835"></p><h2 id="3-创建GitHub仓库"><a href="#3-创建GitHub仓库" class="headerlink" title="3. 创建GitHub仓库"></a>3. 创建GitHub仓库</h2><p><img src="https://yp.jiulinger.cn/images/image-20211220173333952.png" alt="image-20211220173333952"></p><h2 id="4-在本地安装Hexo博客"><a href="#4-在本地安装Hexo博客" class="headerlink" title="4. 在本地安装Hexo博客"></a>4. 在本地安装Hexo博客</h2><ol><li>在自定义文件夹内打开CMD命令行进行以下操作</li></ol><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">npm install -g hexo-cli<br></code></pre></div></td></tr></table></figure><p><img src="https://yp.jiulinger.cn/images/image-20211220175350022.png" alt="image-20211220175350022"></p><p><img src="https://yp.jiulinger.cn/images/image-20211220175403090.png" alt="image-20211220175403090"></p><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">hexo init Hexo<br></code></pre></div></td></tr></table></figure><p><img src="https://yp.jiulinger.cn/images/image-20211220175429424.png" alt="image-20211220175429424"></p><p><img src="https://yp.jiulinger.cn/images/image-20211220175514262.png" alt="image-20211220175514262"></p><ol start="2"><li>执行hexo命令，在本地生成博客页面</li></ol><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">hexo clean  <span class="hljs-comment">//清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span><br>hexo g<span class="hljs-comment">//生成博客网站静态文件。</span><br>hexo d<span class="hljs-comment">//部署网站到GitHub。</span><br>hexo s<span class="hljs-comment">//启动服务器。默认情况下，访问网址为： http://localhost:4000/。</span><br></code></pre></div></td></tr></table></figure><h2 id="5-部署Hexo到GitHub"><a href="#5-部署Hexo到GitHub" class="headerlink" title="5. 部署Hexo到GitHub"></a>5. 部署Hexo到GitHub</h2><ol><li>安装Git推送功能</li></ol><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">npm install --save hexo-deployer-git<br></code></pre></div></td></tr></table></figure><ol start="2"><li>修改配置文件_config.yml</li></ol><figure class="highlight css"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs css">deploy:<br>  type: git<br>  repository: git@github.com:jiulinger/jiulinger.github.io.git<br>  branch: master<br></code></pre></div></td></tr></table></figure><ol start="3"><li>执行下面操作将博客部署到GitHub</li></ol><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java">hexo clean <br>hexo g<br>hexo d<br></code></pre></div></td></tr></table></figure><p><img src="https://yp.jiulinger.cn/images/image-20211220183707798.png" alt="image-20211220183707798"></p><h2 id="6-自定义Hexo域名"><a href="#6-自定义Hexo域名" class="headerlink" title="6. 自定义Hexo域名"></a>6. 自定义Hexo域名</h2><ol><li>创建CNAME无后缀文件，将域名填写进去</li></ol><p><img src="https://yp.jiulinger.cn/images/image-20211220191232135.png" alt="image-20211220191232135"></p><ol start="2"><li>在GitHub中的Pages页面中将域名添加进去</li></ol><p><img src="https://yp.jiulinger.cn/images/image-20211220191644995.png" alt="image-20211220191644995"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>博客之旅</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>博客之旅</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2022/01/01/hello-world/"/>
+    <url>/2022/01/01/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></div></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">$ hexo server<br></code></pre></div></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">$ hexo generate<br></code></pre></div></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></div></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>博客之旅</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>博客之旅</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
